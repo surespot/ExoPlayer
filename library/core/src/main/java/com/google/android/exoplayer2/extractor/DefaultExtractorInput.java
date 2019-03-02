@@ -107,7 +107,7 @@ public final class DefaultExtractorInput implements ExtractorInput {
 
   @Override
   public void skipFully(int length) throws IOException, InterruptedException {
-    skipFully(length, false);
+    skipFully(length, true);
   }
 
   @Override
@@ -259,7 +259,7 @@ public final class DefaultExtractorInput implements ExtractorInput {
     }
     int bytesRead = dataSource.read(target, offset + bytesAlreadyRead, length - bytesAlreadyRead);
     if (bytesRead == C.RESULT_END_OF_INPUT) {
-      if (bytesAlreadyRead == 0 && allowEndOfInput) {
+      if (allowEndOfInput) {
         return C.RESULT_END_OF_INPUT;
       }
       throw new EOFException();
