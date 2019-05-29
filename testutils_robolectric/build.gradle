@@ -33,6 +33,10 @@ android {
         // which is not part of Android.
         disable 'InvalidPackage'
     }
+    buildTypes {
+        sandbox {
+        }
+    }
 }
 
 dependencies {
