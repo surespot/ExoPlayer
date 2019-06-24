@@ -19,6 +19,7 @@ import androidx.annotation.IntDef;
 import androidx.annotation.Nullable;
 import android.util.Pair;
 import android.util.SparseArray;
+
 import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.ParserException;
@@ -42,6 +43,7 @@ import com.google.android.exoplayer2.util.NalUnitUtil;
 import com.google.android.exoplayer2.util.ParsableByteArray;
 import com.google.android.exoplayer2.util.TimestampAdjuster;
 import com.google.android.exoplayer2.util.Util;
+
 import java.io.IOException;
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
@@ -409,7 +411,9 @@ public final class FragmentedMp4Extractor implements Extractor {
       parserState = STATE_READING_ATOM_PAYLOAD;
     } else {
       if (atomSize > Integer.MAX_VALUE) {
-        throw new ParserException("Skipping atom with length > 2147483647 (unsupported).");
+        return false;
+        //This makes exoplayer puke when decrypting encrypted AES GCM stream for some reason
+        //throw new ParserException("Skipping atom with length > 2147483647 (unsupported).");
       }
       atomData = null;
       parserState = STATE_READING_ATOM_PAYLOAD;
