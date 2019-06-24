@@ -26,7 +26,7 @@ android {
     defaultConfig {
         versionName project.ext.releaseVersion
         versionCode project.ext.releaseVersionCode
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion project.ext.targetSdkVersion
     }
 
@@ -53,14 +53,14 @@ android {
 
 dependencies {
     implementation project(modulePrefix + 'library-core')
-    implementation project(modulePrefix + 'library-dash')
-    implementation project(modulePrefix + 'library-hls')
-    implementation project(modulePrefix + 'library-smoothstreaming')
+//    implementation project(modulePrefix + 'library-dash')
+//    implementation project(modulePrefix + 'library-hls')
+//    implementation project(modulePrefix + 'library-smoothstreaming')
     implementation project(modulePrefix + 'library-ui')
-    implementation project(modulePrefix + 'extension-cast')
-    implementation 'com.android.support:support-v4:' + supportLibraryVersion
-    implementation 'com.android.support:appcompat-v7:' + supportLibraryVersion
-    implementation 'com.android.support:recyclerview-v7:' + supportLibraryVersion
+//    implementation project(modulePrefix + 'extension-cast')
+//    implementation 'com.android.support:support-v4:' + supportLibraryVersion
+//    implementation 'com.android.support:appcompat-v7:' + supportLibraryVersion
+//    implementation 'com.android.support:recyclerview-v7:' + supportLibraryVersion
 }
 
 apply plugin: 'com.google.android.gms.strict-version-matcher-plugin'

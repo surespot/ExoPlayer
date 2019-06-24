@@ -74,6 +74,7 @@ dependencies {
     testImplementation 'org.robolectric:robolectric:' + robolectricVersion
     testImplementation 'com.google.auto.value:auto-value-annotations:' + autoValueVersion
     testAnnotationProcessor 'com.google.auto.value:auto-value:' + autoValueVersion
+    implementation 'org.jetbrains:annotations:15.0'
 }
 
 ext {

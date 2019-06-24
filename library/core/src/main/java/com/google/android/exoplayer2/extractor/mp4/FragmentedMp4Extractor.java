@@ -15,8 +15,6 @@
  */
 package com.google.android.exoplayer2.extractor.mp4;
 
-import androidx.annotation.IntDef;
-import androidx.annotation.Nullable;
 import android.util.Pair;
 import android.util.SparseArray;
 
@@ -54,6 +52,9 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
+
+import androidx.annotation.IntDef;
+import androidx.annotation.Nullable;
 
 /**
  * Extracts data from the FMP4 container format.

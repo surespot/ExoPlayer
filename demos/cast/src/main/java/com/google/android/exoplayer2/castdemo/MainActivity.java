@@ -17,7 +17,7 @@ package com.google.android.exoplayer2.castdemo;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v4.graphics.ColorUtils;
+import androidx.core.graphics.ColorUtils;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
