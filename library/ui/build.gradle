@@ -29,7 +29,7 @@ android {
     }
 
     buildTypes {
-        sandbox {}
+        preview {}
         // Re-enable test coverage when the following issue is fixed:
         // https://issuetracker.google.com/issues/37019591
         // debug {
